@@ -17,6 +17,8 @@ services:
     container_name: crawler_kamis
     env_file:
       - ./.env
+    environment:
+      - PYTHONPATH=/app
     depends_on:
       - db
     volumes:

@@ -191,4 +191,3 @@ notebooks/output/
 
 rag_config.py
 batch_rag_search.py
-extracted_graph/

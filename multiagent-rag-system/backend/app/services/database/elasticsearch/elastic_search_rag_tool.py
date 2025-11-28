@@ -422,74 +422,6 @@ class MultiIndexRAGSearchEngine:
             result[f"normalized_{score_field}"] = normalized_score
         return results
     
-    def dense_only_then_rerank(self, query: str) -> Dict:
-        """
-        1) (옵션) HyDE로 텍스트/테이블 쿼리 강화
-        2) TEXT/TABLE 인덱스에 대해 Dense 검색만 수행
-        3) (옵션) 리랭킹 적용(BGE/Cohere/Qwen 중 simple_reranking에서 선택)
-        4) (옵션) 요약 후 결과 반환
-
-        반환 형식은 advanced_rag_search와 유사하게 맞춤
-        {
-          "query": ...,
-          "enhanced_query": {"text": ..., "table": ...},
-          "results": [...],                # 최종 결과 (TOP_K_FINAL까지)
-          "total_candidates": <dense 총 후보 수>,
-          "final_count": <최종 개수>,
-          "processing_time": <sec>,
-          "config": {...}
-        }
-        """
-        start_time = datetime.now()
-
-        # 1) HyDE 적용 여부 유지 (기존 방식 준수)
-        if self.USE_HYDE:
-            enhanced_query_text = self.query_enhancement_hyde_text(query)
-            enhanced_query_table = self.query_enhancement_hyde_table(query)
-        else:
-            enhanced_query_text = query
-            enhanced_query_table = query
-
-        # 2) Dense 검색 (기존 dense_retrieval_index를 그대로 활용)
-        dense_results = []
-        dense_results += self.dense_retrieval_index(enhanced_query_text, self.TEXT_INDEX, self.TOP_K_RETRIEVAL)
-        dense_results += self.dense_retrieval_index(enhanced_query_table, self.TABLE_INDEX, self.TOP_K_RETRIEVAL)
-
-        # 3) 리랭킹 (설정에 따라 적용, 아니면 ES _score 기준, RRF 사용하는 경우에는 Dense에 리랭킹 적용)
-        if self.USE_RERANKING and len(dense_results) > 0 and self.USE_RRF:
-            reranked = self.simple_reranking(dense_results, query, top_k=self.TOP_K_RERANK)
-            ranked = self._assign_rank(reranked, score_key="rerank_score", rank_key="rank_dense_only")
-        else:
-            ranked = self._assign_rank(dense_results, score_key="score", rank_key="rank_dense_only")
-
-        # 최종 상위 K
-        final_results = ranked[:self.TOP_K_FINAL]
-
-        # 4) (옵션) 요약
-        if self.USE_SUMMARIZATION:
-            final_results = self.document_summarization(final_results, query)
-
-        end_time = datetime.now()
-        duration = (end_time - start_time).total_seconds()
-
-        return {
-            "query": query,
-            "enhanced_query": {
-                "text": enhanced_query_text,
-                "table": enhanced_query_table
-            },
-            "results": final_results,
-            "total_candidates": len(dense_results),
-            "final_count": len(final_results),
-            "processing_time": duration,
-            "config": {
-                "mode": "dense_only_rerank",
-                "hybrid_alpha": self.HYBRID_ALPHA,
-                "use_hyde": self.USE_HYDE,
-                "use_reranking": self.USE_RERANKING,
-                "use_summarization": self.USE_SUMMARIZATION,
-            }
-        }
 
     def hybrid_search_RRF(self, query: str, alpha: float = None, top_k: int = 20,
                       enhanced_query_text: str = None, enhanced_query_table: str = None) -> List[Dict]:
@@ -926,62 +858,6 @@ class MultiIndexRAGSearchEngine:
             }
         }
 
-    def dense_only_search(self, query: str, top_k: int = 20) -> Dict:
-        """
-        Dense 검색만 수행 (리랭킹 없음)
-        - TEXT/TABLE 인덱스에 대해 Dense 검색만 수행
-        - HyDE 미적용
-        - 리랭킹 미적용
-        - 상위 top_k개 결과만 반환
-        
-        Args:
-            query: 검색 쿼리
-            top_k: 반환할 최대 결과 수
-            
-        Returns:
-            {
-                "query": 검색 쿼리,
-                "results": [상위 top_k개 Dense 검색 결과],
-                "total_candidates": Dense 검색 총 후보 수,
-                "final_count": 최종 반환 결과 수,
-                "processing_time": 처리 시간(초),
-                "config": 설정 정보
-            }
-        """
-        start_time = datetime.now()
-        
-        # Dense 검색 수행 (두 인덱스)
-        dense_results = []
-        dense_results += self.dense_retrieval_index(query, self.TEXT_INDEX, top_k)
-        dense_results += self.dense_retrieval_index(query, self.TABLE_INDEX, top_k)
-        
-        # ES 점수로 정렬
-        ranked = self._assign_rank(dense_results, score_key="score", rank_key="rank_dense")
-        
-        # 상위 top_k개만 선택
-        final_results = ranked[:top_k]
-        
-        # 요약 처리 (USE_SUMMARIZATION이 True일 경우)
-        if self.USE_SUMMARIZATION:
-            final_results = self.document_summarization(final_results, query)
-        
-        end_time = datetime.now()
-        duration = (end_time - start_time).total_seconds()
-        
-        return {
-            "query": query,
-            "results": final_results,
-            "total_candidates": len(dense_results),
-            "final_count": len(final_results),
-            "processing_time": duration,
-            "config": {
-                "mode": "dense_only",
-                "use_hyde": False,
-                "use_reranking": False,
-                "use_summarization": self.USE_SUMMARIZATION,
-                "top_k": top_k
-            }
-        }
 
 def search(query: str, top_k: int = 20):
     """

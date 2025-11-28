@@ -818,7 +818,7 @@ class DataGathererAgent:
             print(f"\n>> DataGatherer: '{tool}' 도구 실행 (쿼리: '{optimized_query}')")
             result = await self.tool_mapping[tool](**optimized_inputs)
             
-            # [NEW] Vector DB에서 Graph-to-Vector 사용 시 메타데이터 태깅
+            # Vector DB에서 Graph-to-Vector 사용 시 메타데이터 태깅
             if tool == "vector_db_search" and state:
                 import os
                 disable_graph_to_vector = os.environ.get("DISABLE_GRAPH_TO_VECTOR", "false").lower() == "true"
