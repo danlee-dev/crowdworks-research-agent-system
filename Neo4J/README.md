@@ -14,8 +14,7 @@ Neo4J/
 ├── docker-compose.yml           # Neo4J & 앱 컨테이너 설정
 ├── extracted_graph/             # 추출된 그래프 데이터 (CSV)
 ├── import/                      # Neo4J 가져오기용 CSV 파일
-├── report_data/                 # 그래프를 추출할 문서 파일
-├── graph_extraction.py          # 통합 그래프 추출 스크립트
+├── graph_extraction.py           # 통합 그래프 추출 스크립트
 ├── merge_csv.py                # CSV 파일 병합 스크립트
 ├── preprocess_file.py          # JSON → TXT 전처리 스크립트
 ├── scheduler.py                # 전체 파이프라인 스케줄러
