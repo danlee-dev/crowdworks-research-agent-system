@@ -5,3 +5,7 @@ pandas
 numpy
 openpyxl
 openai
+langchain-google-genai
+langchain-openai
+langchain-core
+google-generativeai

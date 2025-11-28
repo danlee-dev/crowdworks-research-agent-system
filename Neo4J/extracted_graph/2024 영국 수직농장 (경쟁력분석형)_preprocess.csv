@@ -1,22 +1,43 @@
 엔터티1,엔터티1유형,관계,엔터티2,엔터티2유형,속성
-캠브리지HOK,기업,생산,수직농장,품목,설립연도:1956;지역:이스트 요크셔;홈페이지:www.cambridgehok.co.uk
-인텔리전트 그로우스 솔루션,기업,생산,수직농장,품목,설립연도:2013;지역:스코틀랜드;홈페이지:www.intelligentgrowthsolutions.com
-버티컬 퓨처,기업,생산,수직농장,품목,설립연도:2016;지역:런던;홈페이지:www.verticalfuture.com
-아이팜,기업,생산,수직농장,품목,설립연도:2017;지역:헬싱키;홈페이지:www.ifarm.fi
-브이팜,기업,생산,수직농장,품목,설립연도:2006;지역:코번트리;홈페이지:www.v-farm.co.uk
-그로우스펙,기업,생산,수직농장,품목,설립연도:2014;지역:노퍽;홈페이지:www.growspec.co.uk
-Harvest London,고객사,이용,캠브리지HOK,기업,적용제품:Vertical Farm
-ReFarm,고객사,이용,인텔리전트 그로우스 솔루션,기업,적용제품:GigaFarm
-Mindful Chef,고객사,이용,버티컬 퓨처,기업,적용제품:수직농장
-Bather Smart Farm,고객사,이용,아이팜,기업,적용제품:아이팜 리피 그린스
-Pershore College,고객사,이용,V-Farm,기관,적용제품:수직농장 설비
-Growmore Crops,고객사,이용,그로우스펙,기업,적용제품:FarmCube Ultra
-Refarm,레퍼런스,공급,인텔리전트 그로우스 솔루션,기업,적용제품:GigaFarm
-Harvest London,레퍼런스,공급,캠브리지HOK,기업,적용제품:수직농장
-Growspec,레퍼런스,공급,그로우스펙,기업,적용제품:수직농장
-Vertical Future,레퍼런스,공급,버티컬 퓨처,기업,적용제품:수직농장
-V-Farm,레퍼런스,공급,브이팜,기업,적용제품:수직농장
-CambridgeHOK,레퍼런스,공급,Harvest London,기업,적용제품:수직농장
-Intelligent Growth Solutions,레퍼런스,공급,ReFarm,기업,적용제품:GigaFarm
-Growspec,레퍼런스,공급,Growmore Crops,기업,적용제품:FarmCube Ultra
-Vertical Future,레퍼런스,공급,Pershore College,기관,적용제품:수직농장 설비
+캠브리지HOK,기업,설립연도,1956,연도,설립연도:1956
+캠브리지HOK,기업,본사위치,이스트 요크셔,지역,지역:이스트 요크셔
+캠브리지HOK,기업,운영사업,온실수직농장,사업,사업:온실수직농장
+캠브리지HOK,기업,경쟁제품,VF 컨셉,제품,제품명:VF 컨셉
+캠브리지HOK,기업,경쟁제품,Harvest London,제품,제품명:Harvest London
+캠브리지HOK,기업,경쟁제품,Gooddrop,제품,제품명:Gooddrop
+캠브리지HOK,기업,경쟁제품,CHOK테이너,제품,제품명:CHOKTainer
+캠브리지HOK,기업,경쟁제품,그로스 타워,제품,제품명:그로스 타워
+캠브리지HOK,기업,경쟁제품,GigaFarms,제품,제품명:GigaFarms
+캠브리지HOK,기업,경쟁제품,FarmCube Ultra,제품,제품명:FarmCube Ultra
+캠브리지HOK,기업,경쟁제품,VF5223,제품,제품명:VF5223
+캠브리지HOK,기업,경쟁제품,Vertical Farming Systems,제품,제품명:Vertical Farming Systems
+캠브리지HOK,기업,경쟁제품,아이팜 리피 그린스,제품,제품명:iFarm Leafy Greens
+캠브리지HOK,기업,경쟁제품,아이팜 컨테이너,제품,제품명:iFarm Container
+캠브리지HOK,기업,경쟁제품,팜큐브 울트라,제품,제품명:FarmCube Ultra
+캠브리지HOK,기업,경쟁제품,버티컬 파밍 시스템,제품,제품명:Vertical Farming Systems
+캠브리지HOK,기업,경쟁제품,그로우스펙,제품,제품명:Growspec
+캠브리지HOK,기업,경쟁제품,VF 컨셉,제품,제조사:캠브리지HOK
+인텔리전트 그로우스 솔루션,기업,설립연도,2013,연도,설립연도:2013
+인텔리전트 그로우스 솔루션,기업,본사위치,스코틀랜드,지역,지역:스코틀랜드
+인텔리전트 그로우스 솔루션,기업,주요기술,수직농장,기술,기술:수직농장
+인텔리전트 그로우스 솔루션,기업,경쟁제품,Growth Towers,제품,제품명:Growth Towers
+인텔리전트 그로우스 솔루션,기업,경쟁제품,GigaFarms,제품,제품명:GigaFarms
+인텔리전트 그로우스 솔루션,기업,경쟁제품,GigaFarms,제품,제조사:인텔리전트 그로우스 솔루션
+인텔리전트 그로우스 솔루션,기업,경쟁제품,Growth Towers,제품,제조사:인텔리전트 그로우스 솔루션
+인텔리전트 그로우스 솔루션,기업,경쟁제품,Vertical Future,제품,제품명:Vertical Future
+인텔리전트 그로우스 솔루션,기업,경쟁제품,아이팜 리피 그린스,제품,제품명:iFarm Leafy Greens
+인텔리전트 그로우스 솔루션,기업,경쟁제품,아이팜 컨테이너,제품,제품명:iFarm Container
+인텔리전트 그로우스 솔루션,기업,경쟁제품,FarmCube Ultra,제품,제품명:FarmCube Ultra
+인텔리전트 그로우스 솔루션,기업,경쟁제품,Vertical Farming Systems,제품,제품명:Vertical Farming Systems
+인텔리전트 그로우스 솔루션,기업,경쟁제품,Growspec,제품,제품명:Growspec
+버티컬 퓨처,기업,설립연도,2016,연도,설립연도:2016
+버티컬 퓨처,기업,본사위치,런던,지역,지역:런던
+버티컬 퓨처,기업,기술특징,완전자동화,기술,기술:완전자동화
+버티컬 퓨처,기업,경쟁제품,Growth Towers,제품,제품명:Growth Towers
+버티컬 퓨처,기업,경쟁제품,GigaFarms,제품,제품명:GigaFarms
+버티컬 퓨처,기업,경쟁제품,Vertical Farming Systems,제품,제품명:Vertical Farming Systems
+버티컬 퓨처,기업,경쟁제품,아이팜 리피 그린스,제품,제품명:iFarm Leafy Greens
+버티컬 퓨처,기업,경쟁제품,아이팜 컨테이너,제품,제품명:iFarm Container
+버티컬 퓨처,기업,경쟁제품,FarmCube Ultra,제품,제품명:FarmCube Ultra
+버티컬 퓨처,기업,경쟁제품,버티컬 파밍 시스템,제품,제품명:Vertical Farming Systems
+버티컬 퓨처,기업,경쟁제품,Growspec,제품,제품명:Growspec

@@ -1,25 +1,23 @@
 엔터티1,엔터티1유형,관계,엔터티2,엔터티2유형,속성
-Bomi 16.8 Balance Probiotics 14 Sachets,제품명,생산,태국,국가,시기:2024년
-Bomi 16.8 Balance Probiotics 14 Sachets,제품명,수입,태국,국가,시기:2024년
-Bomi 16.8 Balance Probiotics 14 Sachets,제품명,대체품,SCGP Probio Active Plus,제품명,시기:2024년
-Bomi 16.8 Balance Probiotics 14 Sachets,제품명,대체품,Holista Gold Probiotic,제품명,시기:2024년
-Bomi 16.8 Balance Probiotics 14 Sachets,제품명,대체품,Watsons 자사 브랜드 프로바이오틱스,제품명,시기:2024년
-Bomi 16.8 Balance Probiotics 14 Sachets,제품명,생산,홀리스,기업명,시기:2024년
-Bomi 16.8 Balance Probiotics 14 Sachets,제품명,생산,버싸짓 아크라윈 인터푸드,기업명,시기:2024년
-Bomi 16.8 Balance Probiotics 14 Sachets,제품명,생산,네이처스 웨이,기업명,시기:2024년
-Bomi 16.8 Balance Probiotics 14 Sachets,제품명,생산,블랙모어,기업명,시기:2024년
-Bomi 16.8 Balance Probiotics 14 Sachets,제품명,수입,태국,국가,시기:2024년
-Bomi 16.8 Balance Probiotics 14 Sachets,제품명,수입,한국,국가,시기:2024년
-Bomi 16.8 Balance Probiotics 14 Sachets,제품명,수입,일본,국가,시기:2024년
-Bomi 16.8 Balance Probiotics 14 Sachets,제품명,수입,스웨덴,국가,시기:2024년
-Bomi 16.8 Balance Probiotics 14 Sachets,제품명,수입,호주,국가,시기:2024년
-Bomi 16.8 Balance Probiotics 14 Sachets,제품명,수입,미국,국가,시기:2024년
-Bomi 16.8 Balance Probiotics 14 Sachets,제품명,수입,태국,국가,시기:2024년
-SCGP Probio Active Plus,제품명,생산,홀리스,기업명,시기:2024년
-Holista Gold Probiotic,제품명,생산,홀리스,기업명,시기:2024년
-Watsons 자사 브랜드 프로바이오틱스,제품명,생산,왓슨스,기업명,시기:2024년
-Watsons 자사 브랜드 프로바이오틱스,제품명,수입,태국,국가,시기:2024년
-Watsons 자사 브랜드 프로바이오틱스,제품명,수입,한국,국가,시기:2024년
-Watsons 자사 브랜드 프로바이오틱스,제품명,수입,일본,국가,시기:2024년
-Watsons 자사 브랜드 프로바이오틱스,제품명,수입,미국,국가,시기:2024년
-Watsons 자사 브랜드 프로바이오틱스,제품명,수입,태국,국가,시기:2024년
+태국,국가,시기,2024,시기,시기:2024년
+Bomi 16.8 Balance Probiotics 14 Sachets,품목,제조국,태국,국가,국가:태국
+Bomi 16.8 Balance Probiotics 14 Sachets,품목,가격,28800,가격,가격:288.00바트
+Bomi 16.8 Balance Probiotics 14 Sachets,품목,포장,종이 상자/PP 스틱,포장,포장형태:종이 상자;포장형태:PP 스틱
+Bomi 16.8 Balance Probiotics 14 Sachets,품목,특징,완제품에 투입되는 가루 형태의 제품임,속성,특징:가루 형태
+쇼피,온라인쇼핑몰,판매제품,프로바이오틱스 완제품,품목,제품명:Merry Cocoa Drink;제품명:Merry Coffee Drink;제품명:Woma' Balance
+라자다,온라인쇼핑몰,판매제품,프로바이오틱스 완제품,품목,제품명:Clover Plus;제품명:Posh Probiotics;제품명:Supurra Probiotics;제품명:Maxx Flow Probiotics;제품명:Mega We Care Prodefenz;제품명:Nature's Way Daily Probiotic
+빅씨,온라인쇼핑몰,판매제품,프로바이오틱스 완제품,품목,제품명:Clover Plus;제품명:Posh Probiotics;제품명:Supurra Probiotics;제품명:Maxx Flow Probiotics;제품명:Mega We Care Prodefenz;제품명:Nature's Way Daily Probiotic
+레몬 팜,유기농 매장,판매제품,프로바이오틱스,품목,제품명:프로틴파쏨 프로바이오틱 롯 호지차라떼;제품명:프로틴파쏨 프로바이오틱 롯 바닐라;제품명:프리바이오틱스 플러스 수퍼푸드 믹스드 베리;제품명:프리바이오틱스 플러스 수퍼푸드 레몬
+Tops,하이퍼마켓,판매제품,프로바이오틱스,품목,제품명:Bomi 16.8 Balance Probiotics;제품명:SCGP Probio Active Plus
+부츠,드럭스토어,판매제품,프로바이오틱스,품목,제품명:Earthlab Probiotics Green Tea;제품명:Blackmore Probiotics Daily Balance
+버싸짓 아크라윈 인터푸드,기업,제조사,버싸짓 아크라윈 인터푸드,기업,설립연도,2016,시기,시기:2016년
+버싸짓 아크라윈 인터푸드,기업,제품,프로바이오틱스 완제품,품목,제품명:롯 호지차라떼,원산지,태국,국가,국가:태국
+네이처스 웨이,기업,제조사,네이처스 웨이,기업,설립연도,1985,시기,시기:1985년
+네이처스 웨이,기업,제품,데일리 프로바이오틱,품목,제품명:Nature's Way Daily Probiotic,원산지,호주,국가,국가:호주
+블랙모어,기업,제조사,블랙모어,기업,설립연도,1932,시기,시기:1932년
+블랙모어,기업,제품,프로바이오틱스 데일리 밸런스,품목,제품명:Blackmore Probiotics Daily Balance,원산지,호주,국가,국가:호주
+닥터퐁,제품,유형,젤리/캡슐,품목,제품명:Jellylad Probiotic Fiber;Dr.Pong 3D,속성,형태:젤리;캡슐
+인터파마,기업,제조사,인터파마,기업,설립연도,없음,시기,시기:없음
+인터파마,기업,제품,프로바이오틱스,품목,제품명:프로박 세븐,원산지,미국,국가,국가:미국
+바이오 가이아,기업,제조사,바이오 가이아,기업,설립연도,없음,시기,시기:없음
+바이오 가이아,기업,제품,프로바이오틱스,품목,제품명:Bio Gaia,원산지,스웨덴,국가,국가:스웨덴

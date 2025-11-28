@@ -8,18 +8,11 @@ output_folder = "./report_data"                      # 결과 저장 폴더
 os.makedirs(output_folder, exist_ok=True)
 
 def normalize_name(name: str) -> str:
-    """
-    파일명에서 '凸'를 모두 제거하고 좌우 공백을 정리.
-    (필요하면 여기서 더 많은 치환 로직을 추가할 수 있습니다.)
-    """
+    # 파일명에서 '凸'를 모두 제거하고 좌우 공백을 정리.
     return name.replace("凸", "").strip()
 
-# --- 기존 결과( report_data )의 파일명을 수집해서 '정규화된 이름' 집합 생성 ---
-# 주의: 아래 집합은 중복 생성을 막기 위해 '정규화된 베이스네임' 기준으로 비교합니다.
 existing_txt_files = glob.glob(os.path.join(output_folder, "*.txt"))
 
-
-# 만약 "기존 report_data의 이름은 정규화하지 않고" 비교하고 싶다면 위 줄을 아래로 바꾸세요.
 existing_names_normalized = {
     os.path.splitext(os.path.basename(p))[0]
     for p in existing_txt_files

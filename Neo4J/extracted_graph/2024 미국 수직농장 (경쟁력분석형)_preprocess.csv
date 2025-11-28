@@ -1,35 +1,15 @@
 엔터티1,엔터티1유형,관계,엔터티2,엔터티2유형,속성
-Freight Farms,기업,생산,Greenery,품목,국가:미국;시기:2024년
-Freight Farms,기업,생산,팜핸드 소프트웨어,기술,국가:미국;시기:2024년
-Freight Farms,기업,수입,Greenery,품목,국가:미국;시기:2024년
-Freight Farms,기업,생산,Greenery S,품목,설비가격:165000달러;시기:2024년
-Freight Farms,기업,생산,Greenery 7,품목,설비가격:169000달러;시기:2024년
-Freight Farms,기업,생산,Greenery S,품목,생산량:연평균2-6톤
-Freight Farms,기업,생산,Greenery 7,품목,생산량:연평균2-5톤
-GP Solutions,기업,생산,Hydro Pod,품목,설비가격:미공개
-GP Solutions,기업,생산,Grow Max Pod,품목,설비가격:미공개
-GP Solutions,기업,생산,Specialty Pods,품목,설비가격:미공개
-GP Solutions,기업,생산,Hydro Pods,품목,유틸리티일평균전력:200kWh이하;유틸리티일평균용수:약19리터
-GP Solutions,기업,생산,Grow Max Pods,품목,유틸리티일평균전력:200kWh이하;유틸리티일평균용수:약19리터
-GP Solutions,기업,생산,Specialty Pods,품목,유틸리티일평균전력:200kWh이하;유틸리티일평균용수:약19리터
-CubicFarm Systems,기업,생산,CubicFarm System,품목,설비가격:미공개
-CubicFarm Systems,기업,생산,HydroGreen Grow Systems,품목,설비가격:미공개
-CubicFarm Systems,기업,생산,HydroGreen Grow Systems,품목,생산량,연간최대25000000파운드(1134000kg)
-CubicFarm Systems,기업,생산,Entry-Level Grow Container,품목,설비가격:최소99000달러
-CubicFarm Systems,기업,생산,Hydroponic Fodder Farm,품목,생산량,일수확량850파운드(385.5kg)
-Growtainers,기업,생산,Entry-Level Grow Container,품목,설비가격:최소99000달러
-Growtainers,기업,생산,Tissue Culture Lab Grow Container,품목,설비가격:최소99000달러
-Growtainers,기업,생산,Microgreens Grow Container,품목,설비가격:최소99000달러
-Zipgrow,기업,생산,ZipPod,품목,설비가격:179000달러
-Zipgrow,기업,생산,ZipFarm,품목,설비가격:179000달러
-FarmBox Foods,기업,생산,Hydroponic Fodder Farm,품목,생산량,일수확량850파운드(385.5kg)
-FarmBox Foods,기업,생산,Vertical Hydroponic Farm,품목,설비가격,미공개
-FarmBox Foods,기업,생산,Gourmet Mushroom Farm,품목,설비가격,미공개
-FarmBox Foods,기업,생산,Hydroponic Fodder Farm,품목,유틸리티일용수:2082리터
-HydroGreen Grow Systems,기업,생산,HydroGreen Grow Systems,품목,생산량,연간최대25000000파운드(1134000kg)
-HydroGreen Grow Systems,기업,생산,HydroGreen Grow Systems,품목,생산량,6일
-HydroGreen Grow Systems,기업,생산,HydroGreen Grow Systems,품목,유틸리티,물90%절약;관개작물대비연최대5억갤런절약
-HydroGreen Grow Systems,기업,생산,HydroGreen Grow Systems,품목,자동화,파종관수조명수확등재배시스템자동제어
-HydroGreen Grow Systems,기업,생산,HydroGreen Grow Systems,품목,레퍼런스,낙농장,소규모축산업,낙농업농장
-HydroGreen Grow Systems,기업,생산,HydroGreen Grow Systems,품목,운영환경,기후무관
-HydroGreen Grow Systems,기업,생산,HydroGreen Grow Systems,품목,규격,가축규모에따라확장/결합가능
+프레이트 팜,기업,제조,그리너리,품목,제품명:Greenery;제조사:Freight Farms;국적:미국;제품종류:수직농장;적용기술:수경재배;설비가격:165000~169000;생산량:연평균2~6톤;유틸리티:일평균151-350kWh;재배작물:상추,허브,엽채류,식용꽃,근채류;자동화기술:Farmhand 소프트웨어;기타사항:40피트 하이큐브 컨테이너,운영환경:영하40도~영상49도
+프레이트 팜,기업,제공,팜핸드 소프트웨어,소프트웨어,운영지원,제품,제품명:Farmhand;기능:원격제어,수확량 추적,데이터 분석
+프레이트 팜,기업,공급,교육기관,기관,적용사례,레퍼런스,마운틴 비스타 하이 스쿨,교육기관,지속가능 농업 실습
+프레이트 팜,기업,공급,유통업체,업체,레퍼런스,킹 타이드 팜스,농장,고품질 농산물 공급
+지피 솔루션,기업,제조,하이드로 포드,품목,제품명:Hydro Pod;적용기술:수경재배;유틸리티:일평균200kWh 미만;재배작물:어린잎채소,상추,허브,토마토;자동화기술:다층 NFT,관수,HVAC,클라우드 모니터링;국적:미국
+지피 솔루션,기업,제조,그로우 맥스 포드,품목,제품명:Grow Max Pod;적용기술:수경재배;유틸리티:일평균19리터;재배작물:240~480ft² 크기,수경재배,허브,야채;자동화기술:자동 관수,환경제어;국적:미국
+지피 솔루션,기업,제조,스페셜리티 포드,품목,제품명:Speciality Pods;적용기술:수경재배;유틸리티:일평균19리터;재배작물:240~480ft² 크기,NFT/간헐흐름,허브,야채;자동화기술:자동 관수,환경제어;국적:미국
+큐빅팜 시스템,기업,제조,큐빅팜 시스템,품목,제품명:CubicFarm System;적용기술:수경재배;설비가격:미공개;생산량:모듈당최대12만개식물부지;생산주기:최소5~21일;유틸리티:물95%절약;재배작물:상추,허브,어린잎채소;자동화기술:Crop Motion,조명,물,공기 흐름 추적;국적:미국
+큐빅팜 시스템,기업,제조,하이드로그린,품목,제품명:HydroGreen Grow Systems;적용기술:수경재배;생산량:연간최대2500만파운드(1134만kg);재배작물:가축사료(보리,밀);자동화기술:파종,관수,조명,수확 자동제어;국적:미국
+큐빅팜 시스템,기업,제조,하이드로 포드,품목,제품명:Hydro Pod;적용기술:수경재배;유틸리티:일평균200kWh 미만;재배작물:어린잎채소,상추,허브,야채;자동화기술:수경재배,관수,환경제어;국적:미국
+그로우테이너,기업,제조,엔트리 레벨 그로우 컨테이너,품목,제품명:Entry-Level Grow Container;적용기술:수경재배;설비가격:최소99000달러;생산량:-;유틸리티:LED조명,제습;재배작물:상추,잎채소;자동화기술:Growrack,환경제어;국적:미국
+그로우테이너,기업,제조,집포드,품목,제품명:ZipPod;적용기술:수경재배;설비가격:179000달러;생산량:연간83200포기(상추),5200kg(케일);유틸리티:전력250kWh,용수40리터;재배작물:상추,허브,케일,과일;자동화기술:기후제어,수경재배,영양공급;국적:캐나다
+팜박스 푸드,기업,제조,하이드로포닉 포더 팜,품목,제품명:Hydroponic Fodder Farm;적용기술:수경재배;생산량:일수확량850파운드(385.5kg);성장주기:7일;유틸리티:일평균2082리터;재배작물:소,말,돼지,염소,닭,토끼,양;자동화기술:배관,전기,센서,환경제어;국적:미국
+팜박스 푸드,기업,제조,하이드로그린,품목,제품명:HydroGreen Grow Systems;적용기술:수경재배;생산량:연간최대2500만파운드(1134만kg);재배작물:가축사료(보리,밀);자동화기술:파종,관수,조명,수확 자동제어;국적:미국

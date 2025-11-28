@@ -734,7 +734,7 @@ class DataGathererAgent:
 
         original_query = inputs.get("query", "")
         
-        # [NEW] Vector DB 검색에서 graph_probe 정보 활용
+        # Vector DB 검색에서 graph_probe 정보 활용
         if tool == "vector_db_search" and state:
             import os
             
@@ -757,7 +757,7 @@ class DataGathererAgent:
                 print(f"  🔴 Graph-to-Vector DISABLED: DISABLE_GRAPH_TO_VECTOR={os.environ.get('DISABLE_GRAPH_TO_VECTOR')}")
                 print(f"  - Graph-to-Vector 비활성화: 기본 쿼리 최적화 수행")
                 optimized_query = await self._optimize_query_for_tool(original_query, tool)
-            elif evidence_exists:
+            else:
                 print(f"  🟢 Graph-to-Vector ENABLED: DISABLE_GRAPH_TO_VECTOR={os.environ.get('DISABLE_GRAPH_TO_VECTOR')}")
                 print(f"  - Vector DB 검색: 실시간 Graph 조회 수행")
                 # Vector DB 검색 시에는 실시간으로 Graph를 조회
@@ -803,9 +803,9 @@ class DataGathererAgent:
                 except Exception as e:
                     print(f"  - 실시간 Graph 조회 실패: {e}, 기본 쿼리 최적화 수행")
                     optimized_query = await self._optimize_query_for_tool(original_query, tool)
-            else:
-                print(f"  - 그래프 증거 없음: 기본 쿼리 최적화 수행")
-                optimized_query = await self._optimize_query_for_tool(original_query, tool)
+            #else:
+                #print(f"  - 그래프 증거 없음: 기본 쿼리 최적화 수행")
+                #optimized_query = await self._optimize_query_for_tool(original_query, tool)
         else:
             # [기존] 실제 도구 실행 전, 쿼리 최적화 단계 추가
             optimized_query = await self._optimize_query_for_tool(original_query, tool)
@@ -818,7 +818,7 @@ class DataGathererAgent:
             print(f"\n>> DataGatherer: '{tool}' 도구 실행 (쿼리: '{optimized_query}')")
             result = await self.tool_mapping[tool](**optimized_inputs)
             
-            # [NEW] Vector DB에서 Graph-to-Vector 사용 시 메타데이터 태깅
+            # Vector DB에서 Graph-to-Vector 사용 시 메타데이터 태깅
             if tool == "vector_db_search" and state:
                 import os
                 disable_graph_to_vector = os.environ.get("DISABLE_GRAPH_TO_VECTOR", "false").lower() == "true"
@@ -1348,71 +1348,71 @@ class DataGathererAgent:
                     )
                 )
 
-            # === [NEW] 문서 관계(docrels) 기반 벡터 DB 후속 검색 ===
-            # Graph-to-Vector 설정 확인
-            import os
-            disable_graph_to_vector = os.environ.get("DISABLE_GRAPH_TO_VECTOR", "false").lower() == "true"
+            # # === 문서 관계(docrels) 기반 벡터 DB 후속 검색 ===
+            # # Graph-to-Vector 설정 확인
+            # import os
+            # disable_graph_to_vector = os.environ.get("DISABLE_GRAPH_TO_VECTOR", "false").lower() == "true"
             
-            if not disable_graph_to_vector:
-                print("  - Graph-to-Vector 활성화: Graph DB 후 Vector DB 확장 검색 시작")
-                try:
-                    # 1) 그래프 리포트에서 증거 추출
-                    docrels = []
-                    isfrom  = []
-                    nutrs   = []
+            # if not disable_graph_to_vector:
+            #     print("  - Graph-to-Vector 활성화: Graph DB 후 Vector DB 확장 검색 시작")
+            #     try:
+            #         # 1) 그래프 리포트에서 증거 추출
+            #         docrels = []
+            #         isfrom  = []
+            #         nutrs   = []
 
-                    if isinstance(raw_results, str):
-                        docrels = self._parse_docrels_from_graph_report(raw_results)
-                        isfrom  = self._parse_isfrom_from_graph_report(raw_results)
-                        nutrs   = self._parse_nutrients_from_graph_report(raw_results)
-                    elif isinstance(raw_results, dict):
-                        # 향후 구조화 반환을 대비한 폴백
-                        docrels = raw_results.get("docrels", []) if isinstance(raw_results.get("docrels"), list) else []
-                        isfrom  = raw_results.get("isfrom",  []) if isinstance(raw_results.get("isfrom"),  list) else []
-                        nutrs   = raw_results.get("nutrients",[]) if isinstance(raw_results.get("nutrients"),list) else []
+            #         if isinstance(raw_results, str):
+            #             docrels = self._parse_docrels_from_graph_report(raw_results)
+            #             isfrom  = self._parse_isfrom_from_graph_report(raw_results)
+            #             nutrs   = self._parse_nutrients_from_graph_report(raw_results)
+            #         elif isinstance(raw_results, dict):
+            #             # 향후 구조화 반환을 대비한 폴백
+            #             docrels = raw_results.get("docrels", []) if isinstance(raw_results.get("docrels"), list) else []
+            #             isfrom  = raw_results.get("isfrom",  []) if isinstance(raw_results.get("isfrom"),  list) else []
+            #             nutrs   = raw_results.get("nutrients",[]) if isinstance(raw_results.get("nutrients"),list) else []
 
-                    # 2) 그래프 전 evidence를 반영해 벡터 쿼리 재작성
-                    refined_query = await self._refine_query_from_graph_all(query, docrels, isfrom, nutrs)
-                    print(f"  - Graph evidence 기반 재작성 쿼리: {refined_query}")
+            #         # 2) 그래프 전 evidence를 반영해 벡터 쿼리 재작성
+            #         refined_query = await self._refine_query_from_graph_all(query, docrels, isfrom, nutrs)
+            #         print(f"  - Graph evidence 기반 재작성 쿼리: {refined_query}")
 
-                    # 3) 벡터 DB 재검색 실행
-                    vec_results = await self._vector_db_search(refined_query)
+            #         # 3) 벡터 DB 재검색 실행
+            #         vec_results = await self._vector_db_search(refined_query)
 
-                    # 4) 메타데이터 태깅 및 점수 보정
-                    for vr in vec_results or []:
-                        md = getattr(vr, "metadata", {}) or {}
-                        md.update({
-                            "derived_from": "graph_evidence",
-                            "refined_query": refined_query,
-                            "evidence_counts": {
-                                "docrels": len(docrels),
-                                "isfrom": len(isfrom),
-                                "nutrients": len(nutrs)
-                            },
-                            "evidence_details": {
-                                "docrels": docrels,
-                                "isfrom": isfrom,
-                                "nutrients": nutrs
-                            },
-                            "graph_evidence_json": {
-                                "docrels": docrels,
-                                "isfrom": isfrom,
-                                "nutrients": nutrs
-                            }
-                        })
-                        vr.metadata = md
-                        try:
-                            vr.score = max(vr.score or 0.0, 0.85)
-                        except Exception:
-                            pass
+            #         # 4) 메타데이터 태깅 및 점수 보정
+            #         for vr in vec_results or []:
+            #             md = getattr(vr, "metadata", {}) or {}
+            #             md.update({
+            #                 "derived_from": "graph_evidence",
+            #                 "refined_query": refined_query,
+            #                 "evidence_counts": {
+            #                     "docrels": len(docrels),
+            #                     "isfrom": len(isfrom),
+            #                     "nutrients": len(nutrs)
+            #                 },
+            #                 "evidence_details": {
+            #                     "docrels": docrels,
+            #                     "isfrom": isfrom,
+            #                     "nutrients": nutrs
+            #                 },
+            #                 "graph_evidence_json": {
+            #                     "docrels": docrels,
+            #                     "isfrom": isfrom,
+            #                     "nutrients": nutrs
+            #                 }
+            #             })
+            #             vr.metadata = md
+            #             try:
+            #                 vr.score = max(vr.score or 0.0, 0.85)
+            #             except Exception:
+            #                 pass
 
-                    search_results.extend(vec_results or [])
-                    print(f"  - Graph→Vector 확장 검색 완료: {len(vec_results or [])}개 추가 결과")
+            #         search_results.extend(vec_results or [])
+            #         print(f"  - Graph→Vector 확장 검색 완료: {len(vec_results or [])}개 추가 결과")
 
-                except Exception as follow_err:
-                    print(f"  - Graph→Vector 후속 검색 중 오류: {follow_err}")
-            else:
-                print("  - Graph-to-Vector 비활성화: Graph DB 후 Vector DB 확장 검색 생략")
+            #     except Exception as follow_err:
+            #         print(f"  - Graph→Vector 후속 검색 중 오류: {follow_err}")
+            # else:
+            #     print("  - Graph-to-Vector 비활성화: Graph DB 후 Vector DB 확장 검색 생략")
 
             print(f"  - Graph DB 검색 완료: {len(search_results)}개 결과")
             return search_results

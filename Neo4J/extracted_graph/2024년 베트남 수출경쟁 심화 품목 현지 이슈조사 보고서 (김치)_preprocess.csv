@@ -1,34 +1,130 @@
 엔터티1,엔터티1유형,관계,엔터티2,엔터티2유형,속성
-CJ제일제당,기업,생산,비비고 김치,품목,원산지:한국;진출연도:2013년
-CJ제일제당,기업,수입,양념,품목,원산지:한국산
-CJ제일제제당,기업,투자,공장,시설,지역:베트남 롱안성 Kizuna;준공연도:2022
-CJ제일제당,기업,수출,김치,품목,목적지:중국|일본|동남아|유럽|호주
-CJ제일제당,기업,생산,김치,품목,용량:100g|500g|1kg;가격:48000동(약2600원)
-CJ제일제당,기업,생산,배추김치,품목,제품명:비비고 배추 김치;용량:100g|500g|1kg;가격:48000동(약2600원)
-Daesang,기업,생산,김치,품목,브랜드:종가집;원산지:한국;용량:450g|1kg;가격:약270000동(약14600원)
-Daesang,기업,수입,배추,원료,지역:베트남 람동성 달랏시
-Daesang,기업,생산,김치,품목,브랜드:종가집;원산지:한국;용량:450g|1kg;가격:약270000동(약14600원)
-Daesang,기업,생산,김치,품목,브랜드:종가집;원산지:베트남;용량:450g;가격:50000동(약2700원)
-GoldSun Food,기업,생산,김치,품목,브랜드:Pojang;유통채널:대형마트 슈퍼마켓 온라인쇼핑몰;가격:40000동(약2200원)
-GoldSun Food,기업,투자,공장,시설,지역:호치민시 Hiep Phuoc 공단;준공연도:2017
-NPFOOD VIETNAM,기업,생산,김치,품목,브랜드:Mr.Lee;원산지:베트남 람동성 달랏시;용량:300g|500g|1kg;가격:40000동(약2200원)
-NPFOOD VIETNAM,기업,생산,김치,품목,브랜드:Viet Han;원산지:베트남 람동성;용량:500g;가격:38000동(약2100원)
-NPFOOD VIETNAM,기업,생산,김치,품목,브랜드:Mr.Lee;원산지:베트남 람동성 달랏시;용량:300g|500g|1kg;가격:40000동(약2200원)
-TH High-Tech Food,기업,생산,김치,품목,브랜드:TH true Food;원산지:베트남 람동성 달랏시;용량:500g;가격:58600동(약3200원)
-TH High-Tech Food,기업,생산,농산물,품목,브랜드:TH FVF;지역:베트남 Bac Ninh
-NPFOOD VIETNAM,기업,수입,양념믹스,품목,원산지:한국산
-NPFOOD VIETNAM,기업,생산,김치,품목,브랜드:Mr.Lee;원산지:베트남 람동성 달랏시;용량:300g|500g|1kg;가격:40000동(약2200원)
-NPFOOD VIETNAM,기업,생산,김치,품목,브랜드:Viet Han;원산지:베트남 람동성;용량:500g;가격:38000동(약2100원)
-NPFOOD VIETNAM,기업,생산,김치,품목,브랜드:Mr.Lee;원산지:베트남 람동성 달랏시;용량:300g|500g|1kg;가격:40000동(약2200원)
-GOLDSUN FOOD JSC,기업,생산,김치,품목,브랜드:Pojang;지역:호치민시 Hiep Phuoc 공단;준공연도:2017;생산량:15000톤
-GOLDSUN FOOD JSC,기업,수입,배추,원료,지역:베트남 람동성 달랏시
-Lotte Mart,유통채널,판매,김치,품목,종가집 총각김치;생산국:한국;용량:500g;가격:169200동(약9100원)
-Lotte Mart,유통채널,판매,김치,품목,비비고 깍두기;생산국:베트남;용량:500g;가격:69000동(약3700원)
-Lotte Mart,유통채널,판매,김치,품목,포장:Pojang 2칸 김치;생산국:베트남;용량:500g;가격:48100동(약2600원)
-Winmart,유통채널,판매,김치,품목,브랜드:Mr.Lee 배추김치;생산국:베트남;용량:500g;가격:36000동(약2000원)
-Winmart,유통채널,판매,김치,품목,브랜드:TH true Food 배추김치;생산국:베트남;용량:500g;가격:58600동(약3200원)
-Aeon Max Value,유통채널,판매,김치,품목,브랜드:비비고 썰은배추김치;생산국:베트남;용량:500g;가격:47100동(약2500원)
-Aeon Max Value,유통채널,판매,김치,품목,브랜드:Viet Han 배추김치;생산국:베트남;용량:500g;가격:38000동(약2100원)
-K-Market,유통채널,판매,김치,품목,브랜드:종가집;생산국:한국;용량:450g;가격:46000동(약2500원)
-K-Market,유통채널,판매,김치,품목,브랜드:GoldSun Pojang;생산국:베트남;용량:500g;가격:48000동(약2600원)
-CircleK,유통채널,판매,김치,품목,브랜드:GoldSun Pojang;생산국:베트남;용량:500g;가격:48000동(약2600원)
+CJ제일제당,기업,투자,베트남 법인,기업,투자형태:100% 투자
+CJ제일제당,기업,공장설립,Kizuna 공장,공장,준공연도:2022;지역:롱안성 Kizuna
+CJ제일제당,기업,생산품목,김치,품목,브랜드:비비고;용량:100g;가격:48000동
+CJ제일제당,기업,생산품목,김치,품목,브랜드:비비고 배추 김치;용량:100g;가격:48000동
+CJ제일제당,기업,생산품목,김치,품목,브랜드:비비고 배추 김치;용량:500g;가격:48000동
+CJ제일제당,기업,생산량,연간생산량,수치,설계생산량:31000톤;확대목표:60000톤
+CJ제일제당,기업,수출,대상국,국가,수출국:중국|일본|동남아|유럽|호주
+CJ제일제당,기업,원료,배추,원료,지역:베트남 람동성 달랏시
+CJ제일제당,기업,수입양념,한국산 양념믹스,품목
+Daesang,기업,투자,대상그룹,기업,투자형태:99.99% 출자
+Daesang,기업,생산품목,김치,품목,브랜드:종가집;용량:1kg;가격:230000~270000동
+Daesang,기업,생산품목,김치,품목,브랜드:종가집 배추 김치;용량:450g;가격:50000동
+Daesang,기업,생산량,생산량정보없음,수치
+Daesang,기업,수출국,없음,국가
+Daesang,기업,원료,배추,원료,지역:베트남 람동성 달랏시
+Daesang,기업,생산,베트남 내 생산,지역,공장주소:Lieu Ha Village Tan Lap Town Yen My District Hung Yen Province
+Daesang,기업,생산,한국산 양념믹스 수입,원료
+NPFOOD VIETNAM,기업,투자,민간기업,투자형태
+NPFOOD VIETNAM,기업,생산품목,김치,품목,브랜드:Mr.Lee;용량:300g;가격:40000동
+NPFOOD VIETNAM,기업,생산품목,채소절임,품목,브랜드:Ngoc Phu
+NPFOOD VIETNAM,기업,생산품목,라이스페이퍼,품목,브랜드:Kim's
+NPFOOD VIETNAM,기업,생산량,생산량정보없음,수치
+NPFOOD VIETNAM,기업,수출국,없음,국가
+NPFOOD VIETNAM,기업,원료,배추,원료,지역:베트남 람동성 달랏시
+NPFOOD VIETNAM,기업,원료,양념,원료,한국산 양념믹스 수입
+NPFOOD VIETNAM,기업,생산,베트남 내 생산,지역,공장주소:Lieu Ha Village Tan Lap Town Yen My District Hung Yen Province
+NPFOOD VIETNAM,기업,유통경로,도매,유통경로,전국 유통사 통해 납품
+NPFOOD VIETNAM,기업,유통경로,소매,유통경로,쇼피 라자다 등 온라인쇼핑몰
+NPFOOD VIETNAM,기업,생산,한국산 김치 수입 후 베트남 내 생산,지역,공장주소:Lieu Ha Village Tan Lap Town Yen My District Hung Yen Province
+NPFOOD VIETNAM,기업,생산,현지생산,지역,공장주소:흥엔성 2호 공장
+NPFOOD VIETNAM,기업,생산량,생산량정보없음,수치
+NPFOOD VIETNAM,기업,수출국,없음,국가
+NPFOOD VIETNAM,기업,원료,배추,원료,지역:베트남 람동성 달랏시
+NPFOOD VIETNAM,기업,원료,양념,원료,한국산 양념믹스 수입
+NPFOOD VIETNAM,기업,유통경로,도매,전국 유통망 통해 납품
+NPFOOD VIETNAM,기업,유통경로,소매,온라인쇼핑몰
+NPFOOD VIETNAM,기업,생산,베트남 내 생산,지역,공장주소:흥엔성 2호 공장
+NPFOOD VIETNAM,기업,생산량,생산량정보없음,수치
+NPFOOD VIETNAM,기업,수출국,없음,국가
+NPFOOD VIETNAM,기업,관심,김치 브랜드,브랜드,Mr.Lee, Pojang, Viet Han, TH true Food
+NPFOOD VIETNAM,기업,생산,베트남 내 생산,지역,공장주소:흥엔성 2호 공장
+NPFOOD VIETNAM,기업,생산량,생산량정보없음,수치
+NPFOOD VIETNAM,기업,수출국,없음,국가
+NPFOOD VIETNAM,기업,원료,배추,원료,지역:베트남 람동성 달랏시
+NPFOOD VIETNAM,기업,원료,양념,원료,한국산 양념믹스 수입
+NPFOOD VIETNAM,기업,유통경로,도매,전국 유통망 통해 납품
+NPFOOD VIETNAM,기업,유통경로,소매,온라인쇼핑몰
+NPFOOD VIETNAM,기업,생산,베트남 내 생산,지역,공장주소:흥엔성 2호 공장
+NPFOOD VIETNAM,기업,생산량,생산량정보없음,수치
+NPFOOD VIETNAM,기업,수출국,없음,국가
+NPFOOD VIETNAM,기업,관심,김치 브랜드,브랜드,Mr.Lee, Pojang, Viet Han, TH true Food
+NPFOOD VIETNAM,기업,생산,베트남 내 생산,지역,공장주소:흥엔성 2호 공장
+NPFOOD VIETNAM,기업,생산량,생산량정보없음,수치
+NPFOOD VIETNAM,기업,수출국,없음,국가
+NPFOOD VIETNAM,기업,원료,배추,원료,지역:베트남 람동성 달랏시
+NPFOOD VIETNAM,기업,원료,양념,원료,한국산 양념믹스 수입
+NPFOOD VIETNAM,기업,유통경로,도매,전국 유통망 통해 납품
+NPFOOD VIETNAM,기업,유통경로,소매,온라인쇼핑몰
+NPFOOD VIETNAM,기업,생산,베트남 내 생산,지역,공장주소:흥엔성 2호 공장
+NPFOOD VIETNAM,기업,생산량,생산량정보없음,수치
+NPFOOD VIETNAM,기업,수출국,없음,국가
+NPFOOD VIETNAM,기업,관심,김치 브랜드,브랜드,Mr.Lee, Pojang, Viet Han, TH true Food
+NPFOOD VIETNAM,기업,생산,베트남 내 생산,지역,공장주소:흥엔성 2호 공장
+NPFOOD VIETNAM,기업,생산량,생산량정보없음,수치
+NPFOOD VIETNAM,기업,수출국,없음,국가
+NPFOOD VIETNAM,기업,원료,배추,원료,지역:베트남 람동성 달랏시
+NPFOOD VIETNAM,기업,원료,양념,원료,한국산 양념믹스 수입
+NPFOOD VIETNAM,기업,유통경로,도매,전국 유통망 통해 납품
+NPFOOD VIETNAM,기업,유통경로,소매,온라인쇼핑몰
+NPFOOD VIETNAM,기업,생산,베트남 내 생산,지역,공장주소:흥엔성 2호 공장
+NPFOOD VIETNAM,기업,생산량,생산량정보없음,수치
+NPFOOD VIETNAM,기업,수출국,없음,국가
+NPFOOD VIETNAM,기업,관심,김치 브랜드,브랜드,Mr.Lee, Pojang, Viet Han, TH true Food
+NPFOOD VIETNAM,기업,생산,베트남 내 생산,지역,공장주소:흥엔성 2호 공장
+NPFOOD VIETNAM,기업,생산량,생산량정보없음,수치
+NPFOOD VIETNAM,기업,수출국,없음,국가
+NPFOOD VIETNAM,기업,원료,배추,원료,지역:베트남 람동성 달랏시
+NPFOOD VIETNAM,기업,원료,양념,원료,한국산 양념믹스 수입
+NPFOOD VIETNAM,기업,유통경로,도매,전국 유통망 통해 납품
+NPFOOD VIETNAM,기업,유통경로,소매,온라인쇼핑몰
+NPFOOD VIETNAM,기업,생산,베트남 내 생산,지역,공장주소:흥엔성 2호 공장
+NPFOOD VIETNAM,기업,생산량,생산량정보없음,수치
+NPFOOD VIETNAM,기업,수출국,없음,국가
+NPFOOD VIETNAM,기업,관심,김치 브랜드,브랜드,Mr.Lee, Pojang, Viet Han, TH true Food
+NPFOOD VIETNAM,기업,생산,베트남 내 생산,지역,공장주소:흥엔성 2호 공장
+NPFOOD VIETNAM,기업,생산량,생산량정보없음,수치
+NPFOOD VIETNAM,기업,수출국,없음,국가
+NPFOOD VIETNAM,기업,원료,배추,원료,지역:베트남 람동성 달랏시
+NPFOOD VIETNAM,기업,원료,양념,원료,한국산 양념믹스 수입
+NPFOOD VIETNAM,기업,유통경로,도매,전국 유통망 통해 납품
+NPFOOD VIETNAM,기업,유통경로,소매,온라인쇼핑몰
+NPFOOD VIETNAM,기업,생산,베트남 내 생산,지역,공장주소:흥엔성 2호 공장
+NPFOOD VIETNAM,기업,생산량,생산량정보없음,수치
+NPFOOD VIETNAM,기업,수출국,없음,국가
+NPFOOD VIETNAM,기업,관심,김치 브랜드,브랜드,Mr.Lee, Pojang, Viet Han, TH true Food
+NPFOOD VIETNAM,기업,생산,베트남 내 생산,지역,공장주소:흥엔성 2호 공장
+NPFOOD VIETNAM,기업,생산량,생산량정보없음,수치
+NPFOOD VIETNAM,기업,수출국,없음,국가
+NPFOOD VIETNAM,기업,원료,배추,원료,지역:베트남 람동성 달랏시
+NPFOOD VIETNAM,기업,원료,양념,원료,한국산 양념믹스 수입
+NPFOOD VIETNAM,기업,유통경로,도매,전국 유통망 통해 납품
+NPFOOD VIETNAM,기업,유통경로,소매,온라인쇼핑몰
+NPFOOD VIETNAM,기업,생산,베트남 내 생산,지역,공장주소:흥엔성 2호 공장
+NPFOOD VIETNAM,기업,생산량,생산량정보없음,수치
+NPFOOD VIETNAM,기업,수출국,없음,국가
+NPFOOD VIETNAM,기업,관심,김치 브랜드,브랜드,Mr.Lee, Pojang, Viet Han, TH true Food
+NPFOOD VIETNAM,기업,생산,베트남 내 생산,지역,공장주소:흥엔성 2호 공장
+NPFOOD VIETNAM,기업,생산량,생산량정보없음,수치
+NPFOOD VIETNAM,기업,수출국,없음,국가
+NPFOOD VIETNAM,기업,원료,배추,원료,지역:베트남 람동성 달랏시
+NPFOOD VIETNAM,기업,원료,양념,원료,한국산 양념믹스 수입
+NPFOOD VIETNAM,기업,유통경로,도매,전국 유통망 통해 납품
+NPFOOD VIETNAM,기업,유통경로,소매,온라인쇼핑몰
+NPFOOD VIETNAM,기업,생산,베트남 내 생산,지역,공장주소:흥엔성 2호 공장
+NPFOOD VIETNAM,기업,생산량,생산량정보없음,수치
+NPFOOD VIETNAM,기업,수출국,없음,국가
+NPFOOD VIETNAM,기업,관심,김치 브랜드,브랜드,Mr.Lee, Pojang, Viet Han, TH true Food
+NPFOOD VIETNAM,기업,생산,베트남 내 생산,지역,공장주소:흥엔성 2호 공장
+NPFOOD VIETNAM,기업,생산량,생산량정보없음,수치
+NPFOOD VIETNAM,기업,수출국,없음,국가
+NPFOOD VIETNAM,기업,원료,배추,원료,지역:베트남 람동성 달랏시
+NPFOOD VIETNAM,기업,원료,양념,원료,한국산 양념믹스 수입
+NPFOOD VIETNAM,기업,유통경로,도매,전국 유통망 통해 납품
+NPFOOD VIETNAM,기업,유통경로,소매,온라인쇼핑몰
+NPFOOD VIETNAM,기업,생산,베트남 내 생산,지역,공장주소:흥엔성 2호 공장
+NPFOOD VIETNAM,기업,생산량,생산량정보없음,수치
+NPFOOD VIETNAM,기업,수출국,없음,국가
+NPFOOD VIETNAM,기업,관심,김치 브랜드,브랜드,Mr.Lee, Pojang, Viet Han, TH true Food
+NPFOOD VIETNAM,기업,생산,베트남 내 생산,지역,공장주소:흥엔성 2호 공장
