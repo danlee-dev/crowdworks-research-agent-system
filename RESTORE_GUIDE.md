@@ -2,14 +2,24 @@
 
 ## 백업 파일 설명
 
-새 서버에서 git clone 후 다음 4개 백업 파일을 사용하여 시스템을 복원합니다.
+새 서버에서 git clone 후 다음 백업 파일들을 사용하여 시스템을 복원합니다.
+
+### 필수 백업 파일 (4개)
 
 | 파일명 | 크기 | 내용 | 복원 위치 |
 |--------|------|------|-----------|
 | `env_backup.tar.gz` | 2KB | API 키, 비밀번호 등 환경 변수 | 프로젝트 루트 및 하위 디렉토리 |
 | `db_backup.tar.gz` | 59.1MB | PostgreSQL + Neo4j 데이터 | `postgresql/`, `Neo4J/data/` |
-| `elasticsearch_backup.tar.gz` | 1.85GB | Elasticsearch 데이터 | Docker volume |
+| `elasticsearch_backup.tar.gz` | 1.85GB | Elasticsearch 인덱스 | Docker volume |
 | `neo4j_volume_backup.tar.gz` | 92.3MB | Neo4j volume 데이터 | Docker volume |
+
+### 선택적 백업 파일 (권장)
+
+| 파일명 | 크기 | 내용 | 복원 위치 |
+|--------|------|------|-----------|
+| `elasticsearch_embedding_backup.tar.gz` | 1.5GB | 벡터 임베딩 데이터 (권장) | `elasticsearch/embedding_datas/` |
+| `crawler_reference_pdf_backup.tar.gz` | 155MB | 참조 PDF 문서 | `crawler/ReferencePDF/` |
+| `elasticsearch_preprocessed_backup.tar.gz` | 145MB | 전처리 데이터 | `elasticsearch/preprocessed_datas/` |
 
 ---
 
